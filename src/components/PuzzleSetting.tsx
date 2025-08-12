@@ -1,4 +1,4 @@
-import { Button, HStack } from '@chakra-ui/react'
+import { Button, Stack } from '@chakra-ui/react'
 import LevelSelector from './LevelSelector'
 import ImageSelector from './ImageSelector';
 
@@ -11,11 +11,18 @@ interface Props {
 
 const PuzzleSetting = ({onLevelSet, onImageSet, onSetSetting}: Props) => {
   return (
-    <HStack justifyContent='center' alignItems='flex-start' paddingX={5} paddingTop='10%' gap={5}>
+    <Stack 
+      direction={{base: 'column', md: 'row'}}
+      justifyContent='center' 
+      alignItems={{ base: 'center', md: 'flex-start' }}  
+      paddingX={5} 
+      paddingTop='10%' 
+      gap={5}
+    >
         <LevelSelector setter={onLevelSet}/>
         <ImageSelector setter={onImageSet}/>
-        <Button size="lg" onClick={onSetSetting}>Applay</Button>
-    </HStack>
+        <Button size="lg" onClick={onSetSetting} width={{base: "240px", md: 'auto'}}>Applay</Button>
+    </Stack>
   )
 }
 
