@@ -11,11 +11,11 @@ const LevelSelector = ({setter}: {setter: (value: string) => void}) => {
             placeholder="Select level"
             onChange={(e) => setter(e.currentTarget.value)}
         >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="1">Easy Peasy</option>
+            <option value="2">Well… Okay</option>
+            <option value="3">I didn’t sign up for This</option>
+            <option value="4">Like Chuck Norris</option>
+            <option value="5">Beach club King</option>
         </NativeSelect.Field>
         <NativeSelect.Indicator />
         </NativeSelect.Root>
